@@ -1,0 +1,322 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+    - hey there
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - good night
+    - have a nice day
+- intent: ask_car_models
+  examples: |
+    - What car models do you have?
+    - What car models do you have? car models available?
+    - Which models are currently in stock?
+    - What new models do you offer?
+    - Do you have any luxury cars available?
+    - What SUVs are available right now?
+    - Are there any hybrid cars among your models?
+    - What sports cars do you have?
+    - Can you list the car models available?
+    - What are the different types of cars you have?
+    - Which car models do you currently have in inventory?
+    - What kinds of cars can I choose from?
+    - Do you have any sedans or SUVs available?
+    - What car models are new this year?
+    - Could you tell me about the car models you offer?
+    - Are there any electric or hybrid cars in your selection?
+    - What are the available models for luxury cars?
+    - Do you have any information on the latest car models?
+    - Can you tell me the types of cars in your showroom?
+    - What car models are available in your inventory?
+    - Which types of cars can I find at your dealership?
+    - Do you have a list of car models in your showroom?
+    - What are the different models of cars you have?
+    - Are there any new car models in your showroom?
+    - Can you provide information on the car models you offer?
+    - What models are currently on display?
+    - Are there any special or limited edition car models available?
+    - Can you list the car models that are in stock?
+- intent: ask_price
+  examples: |
+    - What is the price of the [Toyota Camry](car_model:Toyota Camry)?
+    - How much does the [Honda Accord](car_model:Honda Accord) cost?
+    - Can you tell me the price of the [Ford Mustang](car_model:Ford Mustang)?
+    - What is the cost of your [Chevrolet Malibu](car_model:Chevrolet Malibu)?
+    - How much is the [Nissan Altima](car_model:Nissan Altima)?
+    - What is the price range for the [Tesla Model 3](car_model:Tesla Model 3)?
+    - Can I get a quote for the [BMW 3 Series](car_model:BMW 3 Series)?
+    - How much does the [Audi A4](car_model:Audi A4) cost?
+    - What is the price for the [Mercedes-Benz C-Class](car_model:Mercedes-Benz C-Class)?
+    - Can you provide the cost of the [Hyundai Sonata](car_model:Hyundai Sonata)?
+    - What is the price range for the [Kia Optima](car_model:Kia Optima)?
+    - How much is the [Subaru Legacy](car_model:Subaru Legacy)?
+    - What’s the cost of the most affordable [Porsche 911](car_model:Porsche 911)?
+    - Can you tell me the price for the latest [Jaguar XF](car_model:Jaguar XF)?
+    - What is the cost of the [Land Rover Range Rover](car_model:Land Rover Range Rover)?
+    - How much does the [Lexus ES](car_model:Lexus ES) go for?
+    - What’s the price of the [Alfa Romeo Giulia](car_model:Alfa Romeo Giulia)?
+    - Do you have a price list for the [Maserati Ghibli](car_model:Maserati Ghibli)?
+- synonym: Toyota Camry
+  examples: |
+    - Toyota Camry
+    - Camry
+    - Toyota
+
+- synonym: Honda Accord
+  examples: |
+    - Honda Accord
+    - Accord
+    - Honda
+
+- synonym: Ford Mustang
+  examples: |
+    - Ford Mustang
+    - Mustang
+    - Ford
+
+- synonym: Chevrolet Malibu
+  examples: |
+    - Chevrolet Malibu
+    - Malibu
+    - Chevy Malibu
+    - Chevy
+
+- synonym: Nissan Altima
+  examples: |
+    - Nissan Altima
+    - Altima
+    - Nissan
+
+- synonym: Tesla Model 3
+  examples: |
+    - Tesla Model 3
+    - Model 3
+    - Tesla
+
+- synonym: BMW 3 Series
+  examples: |
+    - BMW 3 Series
+    - 3 Series
+    - BMW
+
+- synonym: Audi A4
+  examples: |
+    - Audi A4
+    - A4
+    - Audi
+
+- synonym: Mercedes-Benz C-Class
+  examples: |
+    - Mercedes-Benz C-Class
+    - C-Class
+    - Mercedes
+
+- synonym: Hyundai Sonata
+  examples: |
+    - Hyundai Sonata
+    - Sonata
+    - Hyundai
+
+- synonym: Kia Optima
+  examples: |
+    - Kia Optima
+    - Optima
+    - Kia
+
+- synonym: Subaru Legacy
+  examples: |
+    - Subaru Legacy
+    - Legacy
+    - Subaru
+
+- synonym: Porsche 911
+  examples: |
+    - Porsche 911
+    - 911
+    - Porsche
+
+- synonym: Jaguar XF
+  examples: |
+    - Jaguar XF
+    - XF
+    - Jaguar
+
+- synonym: Land Rover Range Rover
+  examples: |
+    - Land Rover Range Rover
+    - Range Rover
+    - Land Rover
+
+- synonym: Lexus ES
+  examples: |
+    - Lexus ES
+    - ES
+    - Lexus
+
+- synonym: Alfa Romeo Giulia
+  examples: |
+    - Alfa Romeo Giulia
+    - Giulia
+    - Alfa Romeo
+
+- synonym: Maserati Ghibli
+  examples: |
+    - Maserati Ghibli
+    - Ghibli
+    - Maserati
+
+- intent: book_appointment
+  examples: |
+    - I want to book an appointment
+    - Schedule a meeting
+    - Book a slot next week
+    - I need to arrange an appointment
+    - Book an appointment for me
+    - I need to book an appointment
+    - Schedule a call 
+    - Can you help me book an appointment?
+    - Arrange a meeting
+    - Set up an appointment 
+    - Book a session 
+    - I want to schedule a visit
+    - I’d like to book an appointment
+    - Can you schedule a meeting
+    - Please book a slot
+    - Arrange an appointment
+    - I want to book an appointment
+    - Set up a meeting
+    - Book a consultation
+    - Schedule a session on 
+    - I need to arrange an appointment 
+
+- intent: cancel_appointment
+  examples: |
+    - I need to cancel my appointment
+    - Cancel the meeting
+    - Please cancel my slot
+    - I want to cancel my appointment
+    - Cancel the consultation
+    - I’d like to cancel my call 
+    - Please cancel my appointment
+    - I need to cancel my meeting
+    - Cancel my session 
+    - I want to cancel the visit 
+    - Please cancel the appointment
+    - I need to cancel my appointment 
+- intent: reschedule_appointment
+  examples: |
+    - I need to reschedule my appointment
+    - Reschedule the meeting
+    - Can you move my appointment 
+    - Please change my appointment
+    - I would like to reschedule my consultation
+    - Can we shift my call
+    - I want to reschedule my session
+    - Move my meeting
+    - Please adjust my session
+    - Can we reschedule my visit
+    - Change my appointment
+- intent: provide_employee_name
+  examples: |
+    - My name is [John Doe](employee_name)
+    - I am [Hermoine](employee_name)
+    - You can contact me, [Mark Smith](employee_name)
+    - My name is [Emily Davis](employee_name)
+    - I am [Michael Johnson](employee_name)
+    - You can reach out to [Sarah Lee](employee_name)
+    - Hello, I am [Robert Brown](employee_name)
+    - I’m [Lisa Carter](employee_name)
+    - I am [James Wilson](employee_name)
+    - My name is [Natalie Garcia](employee_name)
+    - Contact [David Martinez](employee_name) for further details
+    - I am [Sophia Taylor](employee_name)
+- intent: provide_customer_name
+  examples: |
+    - I’m [Sophia Martinez](customer_name)
+    - My name is [Ethan Wilson](customer_name)
+    - You can call me [Lucas Lee](customer_name)
+    - Hello, my name is [Ava Thompson](customer_name)
+    - I am [Liam Garcia](customer_name)
+    - Please address me as [Mia Anderson](customer_name)
+    - I go by [Noah Thomas](customer_name)
+    - You can refer to me as [Amelia Scott](customer_name)
+    - I am [Benjamin Young](customer_name)
+    - My name is [Harper Lewis](customer_name)
+    - I’m [Logan Walker](customer_name)
+    - You can reach me as [Lily Nelson](customer_name)
+    - Hello, I’m [Jackson Robinson](customer_name)
+    - I’m [Isabella Hall](customer_name)
+- intent: provide_appointment_purpose
+  examples: |
+    - I need to book an appointment for [a dental check-up](appointment_purpose)
+    - The purpose of the meeting is [to discuss the project](appointment_purpose)
+    - I want to schedule [a consultation](appointment_purpose)
+    - The appointment is for [a job interview](appointment_purpose)
+    - I need to schedule [a routine check-up](appointment_purpose)
+    - The purpose of this appointment is [to review my medical history](appointment_purpose)
+    - I want to book a meeting [to discuss contract details](appointment_purpose)
+    - This appointment is [for a legal consultation](appointment_purpose)
+    - I need to arrange [a meeting to finalize the proposal](appointment_purpose)
+    - The purpose is [to attend a workshop](appointment_purpose)
+    - I’m booking this for [a personal training session](appointment_purpose)
+    - The meeting is [to plan the quarterly review](appointment_purpose)
+    - Schedule [a strategy discussion](appointment_purpose)
+- intent: provide_new_appointment_date
+  examples: |
+    - Reschedule to [2024-08-10](new_date)
+    - Move the appointment to [2024-08-12](new_date)
+    - Change the appointment date to [2024-09-01](new_date)
+    - Reschedule to [2024-08-15](new_date)
+    - Move the meeting to [2024-08-20](new_date)
+    - Change the appointment to [2024-09-01](new_date)
+    - Can we set this for [2024-08-25](new_date)?
+    - Adjust the date to [2024-08-30](new_date)
+    - Shift the appointment to [2024-08-18](new_date)
+    - Update the schedule to [2024-09-05](new_date)
+    - Please reschedule for [2024-08-22](new_date)
+    - Set the new date to [2024-08-28](new_date)
+- intent: provide_new_appointment_time
+  examples: |
+    - I would like to reschedule to [15:00:00](time) tomorrow
+    - Can we move the appointment to [14:00:00](time) on [2024-08-05](date)?
+    - I need to change my appointment to [16:00:00](time) today
+    - Let's set the new time for [11:00:00](time) next week
+    - I want to schedule the meeting for [12:00:00](time) on [2024-08-09](date)
+    - Change the appointment to [10:00:00](time) on [2024-08-13](date)
+    - My new preferred time is [14:30:00](time)
+    - I would like to set the appointment to [19:00:00](time) this evening
+    - Move it to [13:00:00](time) tomorrow
+    - Can we make it [08:00:00](time)?
+- intent: provide_appointment_date
+  examples: |
+    - I want to schedule it for [2024-07-10](date)
+    - Can we set the appointment to [2024-08-09](date)?
+    - I would like to book it on [2024-08-15](date)
+    - Move my appointment to [2024-09-01](date)
+    - Set it for [2024-08-05](date)
+    - How about [2024-08-31](date)?
+    - I need to reschedule to [2024-09-03](date)
+    - Can we do it on [2024-11-28](date)?
+    - Please book it for [2024-10-01](date)
+    - Let's set the date to [2024-08-25](date)
+- intent: provide_appointment_time
+  examples: |
+    - I need to book it for [15:00:00](time)
+    - Schedule it for [15:00:00](time)
+    - I would like the appointment at [10:30:00](time)
+    - Can we do it at [12:00:00](time)?
+    - Please set the time to [08:00:00](time)
+    - I need it at [17:15:00](time)
+    - How about [14:45:00](time)?
+    - Set it for [12:00:00](time)
+    - I prefer [16:00:00](time)
+    - Book it at [09:00:00](time)

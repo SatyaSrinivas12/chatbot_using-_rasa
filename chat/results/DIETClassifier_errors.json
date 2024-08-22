@@ -1,0 +1,26 @@
+[
+  {
+    "text": "Let's set the date to 2024-08-25",
+    "entities": [
+      {
+        "start": 22,
+        "end": 32,
+        "value": "2024-08-25",
+        "entity": "date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "new_date",
+        "start": 22,
+        "end": 32,
+        "confidence_entity": 0.5761740803718567,
+        "value": "2024-08-25",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

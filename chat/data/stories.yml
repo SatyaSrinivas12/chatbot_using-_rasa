@@ -1,0 +1,93 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: car model inquiry
+  steps:
+  - intent: ask_car_models
+  - action: action_provide_car_models
+
+- story: car price inquiry
+  steps:
+  - intent: ask_price
+  - action: utter_ask_car_model_for_price
+  - slot_was_set:
+    - car_model: [Sedan]  # This slot is set based on user input
+  - action: action_provide_price
+
+- story: booking appointment with employee
+  steps:
+  - intent: book_appointment
+  - action: utter_ask_customer_name
+  - intent: provide_customer_name
+    entities:
+      - customer_name: [Alice]
+  - slot_was_set:
+    - customer_name: [Alice]
+  - action: utter_ask_employee_name
+  - intent: provide_employee_name
+    entities:
+      - employee_name: [John Doe]
+  - slot_was_set:
+    - employee_name: [John Doe]
+  - action: utter_ask_appointment_purpose
+  - intent: provide_appointment_purpose
+    entities:
+      - appointment_purpose: [Discuss new car models]
+  - slot_was_set:
+    - appointment_purpose: [Discuss new car models]
+  - action: utter_ask_appointment_date
+  - intent: provide_appointment_date
+    entities:
+      - appointment_date: [2024-08-05]
+  - slot_was_set:
+    - appointment_date: [2024-08-05]
+  - action: utter_ask_appointment_time
+  - intent: provide_appointment_time
+    entities:
+      - appointment_time: [10 AM]
+  - slot_was_set:
+    - appointment_time: [10 AM]
+  - action: action_book_appointment
+  - action: utter_appointment_confirmation
+
+- story: reschedule appointment
+  steps:
+  - intent: reschedule_appointment
+  - action: utter_ask_customer_name
+  - intent: provide_customer_name
+    entities:
+      - customer_name: [Alice]
+  - slot_was_set:
+    - customer_name: [Alice]
+  - action: utter_ask_new_appointment_date
+  - intent: provide_new_appointment_date
+    entities:
+      - new_date: [2024-08-10]
+  - slot_was_set:
+    - new_date: [2024-08-10]
+  - action: utter_ask_new_appointment_time
+  - intent: provide_new_appointment_time
+    entities:
+    - new_time: [11 AM]
+    - slot_was_set:
+    - new_time: [11 AM]
+  - action: action_reschedule_appointment
+  - action: utter_reschedule_confirmation
+
+- story: cancel appointment
+  steps:
+  - intent: cancel_appointment
+  - action: utter_ask_customer_name
+  - intent: provide_customer_name
+    entities:
+      - customer_name: [Alice]
+  - slot_was_set:
+    - customer_name: [Alice]
+  - action: action_cancel_appointment
+  - action: utter_cancellation_confirmation

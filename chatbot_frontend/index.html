@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        #chatbox {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        #chatlogs {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .message {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .message.user .bubble {
+            background-color: #0084ff;
+            color: #fff;
+            align-self: flex-end;
+        }
+
+        .message.bot .bubble {
+            background-color: #e5e5ea;
+            color: #000;
+            align-self: flex-start;
+        }
+
+        .bubble {
+            max-width: 75%;
+            padding: 10px;
+            border-radius: 20px;
+            word-wrap: break-word;
+            position: relative;
+        }
+
+        .bubble::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-top: 10px solid;
+            bottom: 0;
+            left: 10px;
+            transform: translateY(50%);
+        }
+
+        .message.user .bubble::before {
+            border-top-color: #0084ff;
+            left: auto;
+            right: 10px;
+        }
+
+        .message.bot .bubble::before {
+            border-top-color: #e5e5ea;
+            left: 10px;
+        }
+
+        #user_input_area {
+            display: flex;
+            border-top: 1px solid #ddd;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        #user_input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        #send_button {
+            background-color: #0084ff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #send_button:hover {
+            background-color: #0073e6;
+        }
+    </style>
+</head>
+<body>
+    <div id="chatbox">
+        <div id="chatlogs">
+            <!-- Messages will appear here -->
+        </div>
+        <div id="user_input_area">
+            <input type="text" id="user_input" placeholder="Type a message...">
+            <button id="send_button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

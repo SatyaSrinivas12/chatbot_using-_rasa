@@ -1,0 +1,7 @@
+rasa
+mysql-connector-python
+transformers
+python-dotenv
+Flask
+requests
+flask-cors

@@ -1,0 +1,30 @@
+version: "2.0"
+
+stories:
+  - story: book_appointment_with_date_and_time
+    steps:
+      - intent: book_appointment
+        entities:
+          - date: "2024-08-05"
+          - time: "10:00"
+      - action: action_book_appointment
+      - action: utter_appointment_confirmation
+
+  - story: cancel_appointment
+    steps:
+      - intent: cancel_appointment
+        entities:
+          - customer_name: "customer_name"
+      - action: action_cancel_appointment
+      - action: utter_cancellation_confirmation
+
+  - story: reschedule_appointment
+    steps:
+      - intent: reschedule_appointment
+        entities:
+          - old_date: "2024-08-05"
+          - new_date: "2024-08-10"
+          - new_time: "15:00"
+      - action: action_reschedule_appointment
+      - action: utter_rescheduling_confirmation
+

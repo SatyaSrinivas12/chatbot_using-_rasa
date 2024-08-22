@@ -1,0 +1,79 @@
+{
+  "car_model": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 23,
+    "confused_with": {}
+  },
+  "appointment_purpose": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 107,
+    "confused_with": {}
+  },
+  "time": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 88,
+    "confused_with": {}
+  },
+  "person": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 135,
+    "confused_with": {}
+  },
+  "customer_name": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 20,
+    "confused_with": {}
+  },
+  "date": {
+    "precision": 1.0,
+    "recall": 0.99,
+    "f1-score": 0.9949748743718593,
+    "support": 100,
+    "confused_with": {
+      "new_date": 1
+    }
+  },
+  "new_date": {
+    "precision": 0.9230769230769231,
+    "recall": 1.0,
+    "f1-score": 0.9600000000000001,
+    "support": 12,
+    "confused_with": {}
+  },
+  "employee_name": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 57,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9981549815498155,
+    "recall": 0.9981549815498155,
+    "f1-score": 0.9981549815498155,
+    "support": 542
+  },
+  "macro avg": {
+    "precision": 0.9903846153846154,
+    "recall": 0.99875,
+    "f1-score": 0.9943718592964824,
+    "support": 542
+  },
+  "weighted avg": {
+    "precision": 0.9982969060459835,
+    "recall": 0.9981549815498155,
+    "f1-score": 0.9981872461940701,
+    "support": 542
+  },
+  "accuracy": 0.9994686503719448
+}

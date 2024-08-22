@@ -1,0 +1,116 @@
+version: '3.1'
+intents:
+- ask_car_models
+- ask_price
+- book_appointment
+- cancel_appointment
+- goodbye
+- greet
+- provide_appointment_date
+- provide_appointment_purpose
+- provide_appointment_time
+- provide_customer_name
+- provide_employee_name
+- provide_new_appointment_date
+- provide_new_appointment_time
+- reschedule_appointment
+
+entities:
+- car_model
+- employee_name
+- customer_name
+- appointment_purpose
+- new_date
+- new_time
+- appointment_date
+- appointment_time
+
+slots:
+  car_model:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: car_model
+  employee_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: employee_name
+  customer_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: customer_name
+  appointment_purpose:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: appointment_purpose
+  new_date:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: new_date
+  new_time:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: new_time
+  appointment_date:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: appointment_date
+  appointment_time:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: appointment_time
+
+responses:
+  utter_greet:
+  - text: Hello! How can I assist you today?
+  utter_goodbye:
+  - text: Goodbye! Have a great day!
+  utter_ask_car_model_for_price:
+  - text: Which car model are you interested in pricing for?
+  utter_ask_employee_name:
+  - text: Which employee would you like to book an appointment with?
+  utter_ask_customer_name:
+  - text: May I have your name for the appointment?
+  utter_ask_appointment_purpose:
+  - text: What is the purpose of the appointment?
+  utter_appointment_confirmation:
+  - text: Your appointment is confirmed.
+  utter_ask_appointment_date:
+  - text: When would you like to schedule the appointment? please provide in [YYYY-MM-DD] format
+  utter_ask_appointment_time:
+  - text: What time would you like for the appointment? please provide the time in [hh:mm:ss] format
+  utter_ask_new_appointment_date:
+  - text: When would you like to reschedule the appointment to?  please provide in [YYYY-MM-DD] format
+  utter_ask_new_appointment_time:
+  - text: What time would you like to reschedule the appointment to? please provide the time in [hh:mm:ss] format
+  utter_reschedule_confirmation:
+  - text: Your appointment has been rescheduled .
+  utter_cancellation_confirmation:
+  - text: Your appointment  has been canceled.
+
+actions:
+- utter_ask_customer_name
+- action_provide_car_models
+- action_provide_price
+- action_book_appointment
+- action_cancel_appointment
+- action_reschedule_appointment
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
